@@ -42,5 +42,26 @@ function loadingAnimation() {
   tl.to("#loader", {
     display: "none",
   });
+
+  tl.from("#nav", {
+    opacity: 0,
+  });
+  tl.from("#hero1 h1, #hero2 h1, #hero3 h2, #hero4 h1", {
+    opacity: 0,
+    y: 120,
+    stagger: 0.1,
+  });
 }
 loadingAnimation();
+
+function cursorAnimation() {
+  document.addEventListener("mousemove", function (e) {
+    gsap.to("#cursor", {
+      left: e.clientX,
+      top: e.clientY,
+    });
+  });
+
+  Shery.makeMagnet("#menu h3");
+}
+cursorAnimation();
