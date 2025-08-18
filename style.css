@@ -244,7 +244,7 @@ body {
 /* Page 2 */
 
 #page2 {
-  height: 90vh;
+  height: 120vh;
   width: 100%;
   padding-top: 20vh;
   position: relative;
@@ -285,8 +285,37 @@ body {
 #page3 {
   min-height: 100vh;
   width: 100%;
-  background-color: rgb(58, 58, 58);
+  /* background-color: rgb(58, 58, 58); */
   position: relative;
+  margin: 17vh 0;
+}
+
+#page3 .content h1::before {
+  content: "02";
+  position: absolute;
+  font-size: 3.2vw;
+  font-weight: 400;
+  font-family: "Silk Serif";
+  left: -9vw;
+  top: 0.5vw;
+}
+#image-container {
+  padding: 2vw;
+  position: relative;
+  overflow: hidden;
+}
+
+.image-div {
+  height: 65vh;
+  width: 23vw;
+  position: relative;
+  overflow: hidden;
+}
+
+.image-div img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 #page4 {
@@ -296,18 +325,20 @@ body {
   width: 100%;
   background: #151515;
   padding: 12vh 0;
+  margin: 25vh 0;
 }
-#page4 #content {
+.content {
   /* background-color: red; */
   width: 71vw;
   margin-left: 28vw;
   position: relative;
 }
-#content h1 {
+.content h1 {
   font-size: 7.3vw;
   text-transform: uppercase;
 }
-#content h1::before {
+
+#page4 .content h1::before {
   content: "03";
   position: absolute;
   font-size: 3.2vw;
@@ -316,13 +347,13 @@ body {
   left: -9vw;
   top: 0.5vw;
 }
-#content .underline {
+.content .underline {
   height: 1.5px;
   width: 95%;
   background-color: #c2c2c2;
   margin: 5vw 0 3.5vw 0;
 }
-#content > p {
+.content > p {
   font-size: 2.25vw;
   width: 50%;
   margin-bottom: 4vw;
@@ -345,7 +376,7 @@ body {
   width: 23%;
   margin-top: -5px;
 }
-#content #info {
+.content #info {
   background-color: #3f7df4;
   width: 34vw;
   position: relative;
@@ -375,7 +406,7 @@ body {
 }
 
 #page5 {
-  height: 100vh;
+  height: 110vh;
   width: 100%;
   position: relative;
 }
@@ -432,7 +463,7 @@ body {
 }
 
 #footer {
-  min-height: 90vh;
+  min-height: 100vh;
   width: 100%;
   position: relative;
 }
@@ -486,4 +517,8 @@ body {
   font-size: 1vw;
   font-weight: 400;
   padding-bottom: 2vw;
+}
+._canvas_container {
+  z-index: 999999 !important;
+  pointer-events: none;
 }

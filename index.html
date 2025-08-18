@@ -7,11 +7,11 @@
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/sheryjs/dist/Shery.css"
+      href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"
     />
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"
+      href="https://cdn.jsdelivr.net/npm/sheryjs/dist/Shery.css"
     />
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
@@ -103,7 +103,7 @@
           <h1>Experience</h1>
         </div>
       </div>
-      <div id="page2" data-scroll data-scroll-speed="-3">
+      <div id="page2" data-scroll data-scroll-speed="0">
         <div id="vid-container">
           <div id="vid-cursor"><i class="ri-play-fill"></i></div>
           <img
@@ -118,9 +118,20 @@
           ></video>
         </div>
       </div>
-      <div id="page3" data-scroll></div>
-      <div id="page4" data-scroll>
-        <div id="content">
+      <div id="page3" data-scroll>
+        <div class="content">
+          <h1>Our Projects</h1>
+          <div class="underline"></div>
+        </div>
+        <div id="image-container">
+          <div class="image-div">
+            <img src="images/Olga_Prudka_1.png" alt="" />
+            <img src="images/Olga_Prudka_2.png" alt="" />
+          </div>
+        </div>
+      </div>
+      <div id="page4" data-scroll data-scroll-speed="-2">
+        <div class="content">
           <h1>About Obys</h1>
           <div class="underline"></div>
           <p>
@@ -168,7 +179,7 @@
           <div class="underline"></div>
         </div>
       </div>
-      <div id="page5" data-scroll>
+      <div id="page5">
         <div class="marqueElem">
           <h1><span class="italic">Sport</span> - Fashion - Technology -</h1>
           <h1><span class="italic">Sport</span> - Fashion - Technology -</h1>
@@ -190,7 +201,7 @@
           <h1><span class="italic">Music</span> - Automotive - Hotels -</h1>
         </div>
       </div>
-      <div id="footer" data-scroll>
+      <div id="footer">
         <div id="footerContent">
           <h1>Let's Create</h1>
           <div class="underline"></div>
@@ -218,6 +229,7 @@
         </div>
       </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
       integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="
@@ -230,7 +242,11 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+    <!-- Three.js is needed for 3d Effects -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script>
+
+    <!-- ControlKit is needed for Debug Panel -->
+    <script src="https://cdn.jsdelivr.net/gh/automat/controlkit.js@master/bin/controlKit.min.js"></script>
     <script
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/sheryjs/dist/Shery.js"
