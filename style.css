@@ -193,8 +193,10 @@ body {
   display: flex;
   align-items: center;
 }
+
 .hero:nth-child(2) {
   margin-top: 17vh;
+  overflow: visible;
 }
 .hero h1 {
   font-family: "Plain Light";
@@ -203,6 +205,15 @@ body {
   line-height: 7.2vw;
   text-transform: uppercase;
   font-weight: 600;
+}
+#hero1::before {
+  content: "01";
+  position: absolute;
+  font-size: 3.2vw;
+  font-weight: 400;
+  font-family: "Silk Serif";
+  left: -9vw;
+  top: 0vw;
 }
 .hero h2 {
   font-family: "Plain Light";
@@ -294,9 +305,18 @@ body {
   font-size: 7.3vw;
   text-transform: uppercase;
 }
+#content h1::before {
+  content: "03";
+  position: absolute;
+  font-size: 3.2vw;
+  font-weight: 400;
+  font-family: "Silk Serif";
+  left: -9vw;
+  top: 0.5vw;
+}
 #content .underline {
   height: 1.5px;
-  width: 100%;
+  width: 95%;
   background-color: #c2c2c2;
   margin: 5vw 0 3.5vw 0;
 }
@@ -407,4 +427,61 @@ body {
   to {
     transform: translateX(calc(-100% - 20px));
   }
+}
+
+#footer {
+  min-height: 90vh;
+  width: 100%;
+  position: relative;
+}
+
+#footerContent {
+  width: 71vw;
+  margin-left: 28vw;
+  position: relative;
+}
+#footer h1 {
+  font-size: 7.3vw;
+  text-transform: uppercase;
+}
+#footer h1::before {
+  content: "04";
+  position: absolute;
+  font-size: 3.2vw;
+  font-weight: 400;
+  font-family: "Silk Serif";
+  left: -9vw;
+  top: 0.5vw;
+}
+#footerContent .underline {
+  height: 1.5px;
+  width: 95%;
+  background-color: #c2c2c2;
+  margin: 5vw 0 5vw 0;
+}
+.footerSection {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 95%;
+}
+.footerSection .box {
+  width: 30%;
+}
+.footerSection h6 {
+  font-size: 0.9vw;
+  margin-bottom: 1.5vw;
+}
+
+.footerSection h4 {
+  font-size: 1.5vw;
+  font-weight: 500;
+}
+#footerContent .underline:nth-child(4) {
+  margin: 7vw 0 1.5vw 0;
+}
+#footerContent .copyright {
+  font-size: 1vw;
+  font-weight: 400;
+  padding-bottom: 2vw;
 }
