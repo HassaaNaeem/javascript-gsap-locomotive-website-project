@@ -327,7 +327,7 @@ body {
   background-color: #3f7df4;
   width: 34vw;
   position: relative;
-  padding: 2vw 3vw;
+  padding: 4.5vw 3vw;
   margin-top: -28vh;
   margin-left: 22.5vw;
 }
@@ -335,8 +335,11 @@ body {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  padding: 2vw 0;
+  padding: 2.5vw 0;
   border-bottom: 1px solid #fff;
+}
+#info .elem:first-child {
+  padding: 0 0 2.5vw 0;
 }
 
 #info .elem h4 {
@@ -352,5 +355,56 @@ body {
 #page5 {
   height: 100vh;
   width: 100%;
-  padding: 5vh 0;
+  position: relative;
+}
+.marqueElem,
+.marqueElemOpposite {
+  white-space: nowrap;
+  overflow-x: hidden;
+  margin-bottom: -2vw;
+}
+.marqueElem h1 {
+  font-size: 7.5vw;
+  /* background-color: red; */
+  text-transform: uppercase;
+  -webkit-text-stroke: 1px #fff;
+  font-weight: 400;
+  color: transparent;
+  display: inline-block;
+  margin-right: 16px;
+  animation-name: marquee;
+  animation-duration: 30s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.marqueElemOpposite h1 {
+  animation-name: marquee;
+  animation-duration: 30s;
+  animation-direction: reverse;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  font-size: 7.5vw;
+  text-transform: uppercase;
+  -webkit-text-stroke: 1px #fff;
+  font-weight: 400;
+  color: transparent;
+  display: inline-block;
+  margin-right: 16px;
+}
+
+.marqueElem h1 span,
+.marqueElemOpposite h1 span {
+  font-style: italic;
+  font-family: "Silk Serif";
+  -webkit-text-stroke: 1px #fff;
+  font-weight: 400;
+  color: transparent;
+}
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - 20px));
+  }
 }
