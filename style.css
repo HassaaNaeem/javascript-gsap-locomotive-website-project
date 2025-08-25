@@ -10,6 +10,7 @@ body {
   width: 100%;
   height: 100%;
   cursor: none;
+  overflow: hidden; /* Important: prevent native scroll */
 }
 
 #cursor {
@@ -162,6 +163,7 @@ body {
 #main {
   position: relative;
   background-color: #151515;
+  overflow: hidden;
 }
 #page1 {
   height: 110vh;
@@ -300,22 +302,89 @@ body {
   top: 0.5vw;
 }
 #image-container {
-  padding: 2vw;
+  padding: 4vw;
   position: relative;
   overflow: hidden;
+  background-color: red;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 1.5vw;
 }
 
 .image-div {
+  height: 90vh;
+  width: 33vw;
+  position: relative;
+}
+
+.image-div:nth-child(1) {
   height: 65vh;
   width: 23vw;
-  position: relative;
-  overflow: hidden;
 }
 
 .image-div img {
   height: 100%;
   width: 100%;
   object-fit: cover;
+}
+
+.image-circle {
+  height: 22vw;
+  width: 22vw;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transition: all 0.6s ease;
+}
+
+.image-circle:nth-child(3) {
+  align-self: flex-end;
+  position: relative;
+  right: -10%;
+}
+
+.image-circle svg {
+  height: 35%;
+}
+.image-circle .rotated {
+  rotate: -45deg;
+}
+
+.circle-in {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  scale: 0;
+  border-radius: 50%;
+  transition: all ease 0.3s;
+}
+.image-circle:hover .circle-in {
+  scale: 1;
+}
+
+.circle-in p {
+  font-size: 0.8vw;
+  color: #000;
+  width: 50%;
+  scale: 0;
+  transition: all ease 0.7s;
+}
+
+.image-circle:hover p {
+  scale: 1;
 }
 
 #page4 {
